@@ -7,6 +7,13 @@
     "orientation": "portrait",
     "jsEngine": "hermes",
     "owner": null,
-    "platforms": ["ios", "android", "web"]
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
