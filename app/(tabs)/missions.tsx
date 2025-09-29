@@ -4,7 +4,7 @@ export default function MissionsScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Misiones</Text>
-      <Text style={styles.body}>Pr�ximamente ver�s tus misiones aqu�.</Text>
+      <Text style={styles.body}>Proximamente veras tus misiones aqui.</Text>
     </View>
   );
 }
