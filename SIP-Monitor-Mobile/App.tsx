@@ -1,19 +1,32 @@
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './app/login';
-import MissionsListScreen from './app/missions/list';
-import MissionDetailScreen from './app/missions/detail';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import MissionsListScreen from './src/screens/MissionsListScreen';
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import { RootStackParamList } from './src/navigation/types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export default function App() {
+const App: React.FC = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Missions" component={MissionsListScreen} />
-        <Stack.Screen name="MissionDetail" component={MissionDetailScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Welcome">
+          <Stack.Screen
+            name="Welcome"
+            component={WelcomeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Missions"
+            component={MissionsListScreen}
+            options={{ title: 'Misiones' }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
-}
+};
+
+export default App;

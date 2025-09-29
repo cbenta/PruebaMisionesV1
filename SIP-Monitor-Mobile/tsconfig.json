@@ -8,6 +8,6 @@
     "allowJs": false,
     "types": ["react", "react-native"]
   },
-  "include": ["app", "types.d.ts"],
+  "include": ["app", "src", "types.d.ts"],
   "exclude": ["node_modules", "**/__tests__/**/*"]
 }

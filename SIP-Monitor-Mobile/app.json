@@ -1,12 +1,12 @@
 {
-  \"expo\": {
-    \"name\": \"SIP Monitor Mobile\",
-    \"slug\": \"sip-monitor-mobile\",
-    \"scheme\": \"sip-monitor-mobile\",
-    \"version\": \"0.1.0\",
-    \"orientation\": \"portrait\",
-    \"jsEngine\": \"hermes\",
-    \"owner\": null,
-    \"platforms\": [\"ios\", \"android\", \"web\"]
+  "expo": {
+    "name": "SIP Monitor Mobile",
+    "slug": "sip-monitor-mobile",
+    "scheme": "sip-monitor-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "owner": null,
+    "platforms": ["ios", "android", "web"]
   }
 }

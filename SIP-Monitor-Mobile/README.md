@@ -1,44 +1,39 @@
 # SIP Monitor Mobile
 
-Base Expo + React Native project scaffold for the SIP Monitor initiative. Business logic, UI design, and data integrations are intentionally omitted.
+Base Expo + React Native project scaffold for the SIP Monitor initiative. Business logic, UI design, and data integrations remain as future work.
 
 ## Requirements
 - Node.js 20.x and npm 10+
 - Expo CLI (installed globally or run with `npx`)
 - Android Studio with an Android Virtual Device, or a physical Android/iOS device with the Expo Go app
 
-## Environment
-1. Copy `.env.example` to `.env`.
-2. Provide the `API_BASE_URL` value according to your backend environment.
-
-## Installation and Development
+## Setup & Development
 ```bash
 npm install
 npx expo start
 ```
+- Within the Expo CLI interface press `a` to launch the Android emulator, or scan the QR code with Expo Go on a device.
 
-### Platform Shortcuts
-```bash
-npm run android
-npm run ios
-npm run web
-```
+### Navegación actual
+1. La app inicia en la pantalla de bienvenida (`/`).
+2. Toca el botón "Ir a Misiones" para abrir la pantalla `/missions`.
+3. Se muestra un listado placeholder de misiones estáticas.
 
-## Quality Tooling
-- `npm run lint` executes ESLint with TypeScript rules.
-- `npm run format` runs Prettier in check mode.
-- `npm run typecheck` validates TypeScript types without emitting outputs.
-- Husky installs a pre-commit hook via `npm install` (triggered through `npm run prepare`).
-- `lint-staged` auto-formats and lints staged files before each commit.
+## Scripts útiles
+- `npm run android` abre el proyecto directamente en Android.
+- `npm run ios` inicia el simulador de iOS (macOS requerido).
+- `npm run web` lanza la versión web experimental.
+- `npm run lint`, `npm run format`, y `npm run typecheck` ejecutan validaciones de calidad.
 
 ## Project Structure
 ```
-app/
-  login.tsx
-  missions/
-    detail.tsx
-    list.tsx
-assets/
+App.tsx
+src/
+  navigation/
+    types.ts
+  screens/
+    MissionsListScreen.tsx
+    WelcomeScreen.tsx
 ```
 
-> TODO: Wire navigation, implement mission flows, connect to the SIP Monitor backend, and design production-ready UI.
+> TODO: Conectar los datos reales, implementar autenticación y diseñar la UI final.
