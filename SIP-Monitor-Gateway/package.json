@@ -1,0 +1,53 @@
+{
+  "name": "sip-monitor-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node dist/main",
+    "start:dev": "nest start --watch",
+    "build": "nest build",
+    "lint": "eslint \"{src,prisma}/**/*.{ts,js}\"",
+    "lint:fix": "eslint \"{src,prisma}/**/*.{ts,js}\" --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.8",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.3.8",
+    "@nestjs/platform-express": "^10.3.8",
+    "@prisma/client": "^5.14.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.3.2",
+    "@nestjs/schematics": "^10.1.1",
+    "@nestjs/testing": "^10.3.8",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prisma": "^5.14.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.5"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "types": ["react", "react-native"]
+  },
+  "include": ["app", "types.d.ts"],
+  "exclude": ["node_modules", "**/__tests__/**/*"]
+}
